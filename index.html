@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Pedro Silva, desenvolvedor Front-end especializado em React, Next.js, TypeScript e Shopify." />
+  <meta name="author" content="Pedro Silva" />
+  <meta name="theme-color" content="#101113" />
+  <meta property="og:title" content="Pedro Silva | Desenvolvedor Front-end" />
+  <meta property="og:description" content="Interfaces modernas, acessíveis e experiências digitais com React, Next.js e Shopify." />
+  <title>Pedro Silva — Desenvolvedor Front-end</title>
+  <link rel="icon" type="image/png" href="assets/portfolio-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="header" id="topo">
+    <a href="#home" class="logo" aria-label="Pedro Silva — início"><b>Pedro Silva</b></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false"><i class="bx bx-menu" aria-hidden="true"></i></button>
+    <nav class="navbar" id="navbar" aria-label="Navegação principal">
+      <a href="#about">Sobre</a>
+      <a href="#projects">Projetos</a>
+      <a href="#skills">Stack</a>
+      <a href="#contact">Contato</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema"><i class="bx bx-sun" aria-hidden="true"></i></button>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Disponível para oportunidades</p>
+        <p class="hero-kicker">Olá, eu sou Pedro Silva</p>
+        <h1>Interfaces que <em>conectam</em><br />pessoas e produtos.</h1>
+        <p class="hero-description">Desenvolvedor <strong>Front-end</strong> focado em React, Next.js, TypeScript e experiências Shopify — transformando ideias em produtos digitais claros, rápidos e memoráveis.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#projects">Explorar projetos <i class="bx bx-right-arrow-alt" aria-hidden="true"></i></a>
+          <a class="button button-ghost" href="assets/Curriculo_Pedro_Henrique_Front-End.pdf" download>Baixar currículo <i class="bx bx-download" aria-hidden="true"></i></a>
+        </div>
+        <div class="hero-socials" aria-label="Redes sociais">
+          <a href="https://www.linkedin.com/in/pedro-silva-dev-2002-js/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/pedrohenrique-23" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="mailto:pedrosilva10057@gmail.com" aria-label="Enviar e-mail"><i class="bx bx-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-visual reveal reveal-delay" data-tilt>
+        <div class="visual-frame"><img src="assets/profile.png" alt="Foto de Pedro Silva" /></div>
+        <!-- <div class="floating-note note-top"><span>01</span><b>Front-end<br />com propósito</b></div> -->
+        <!-- <div class="floating-note note-bottom"><i class="bx bx-code-alt"></i><span>React · Next · Shopify</span></div> -->
+      </div>
+      <a class="scroll-cue" href="#about"><span>Scroll para descobrir</span><i class="bx bx-down-arrow-alt" aria-hidden="true"></i></a>
+    </section>
+
+    <section class="about section section-soft" id="about">
+      <div class="section-heading reveal"><p class="eyebrow">01 / Sobre mim</p><h2>Construo com código,<br /><em>penso como usuário.</em></h2></div>
+      <div class="about-grid">
+        <div class="about-text reveal"><p>Sou desenvolvedor Front-end apaixonado por transformar problemas complexos em interfaces simples, eficientes e acessíveis. Trabalho principalmente com <strong>React, Next.js, TypeScript e JavaScript</strong>.</p><p>Atualmente, sou <strong>estagiário de Front-end em uma agência especializada em Shopify</strong>, onde desenvolvo e personalizo experiências de e-commerce. Essa vivência ampliou meu olhar para performance, conversão, responsividade e detalhes que fazem uma loja vender melhor.</p><p>Sou formado em Análise e Desenvolvimento de Sistemas, curso Engenharia de Software e concluí minha formação em Desenvolvimento Full Stack pela Kenzie Academy Brasil. Minha experiência anterior como supervisor de telemarketing fortaleceu minha comunicação, liderança e capacidade de resolver problemas com clareza.</p><a class="text-link" href="#contact">Vamos conversar <i class="bx bx-right-arrow-alt"></i></a></div>
+        <div class="about-facts formation-only reveal reveal-delay"><div class="fact"><span>Formação principal</span><strong>Análise e Desenvolvimento de Sistemas</strong></div><div class="fact"><span>Em andamento</span><strong>Engenharia<br />de Software</strong></div></div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="section-heading projects-heading reveal"><div><p class="eyebrow">02 / Projetos selecionados</p><h2>Ideias que ganharam<br /><em>forma na tela.</em></h2></div>
+    </div>
+      <div class="project-showcase" id="project-list" aria-live="polite"></div>
+    </section>
+
+    <section class="skills section section-soft" id="skills"><div class="section-heading reveal"><p class="eyebrow">03 / Stack</p><h2>Ferramentas para<br /><em>fazer acontecer.</em></h2></div><div class="skill-marquee" aria-label="Tecnologias utilizadas"><div class="marquee-track"><span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i><span>TypeScript</span><i>✦</i><span>React</span><i>✦</i><span>Next.js</span><i>✦</i><span>Shopify</span><i>✦</i><span>Tailwind CSS</span><i>✦</i><span>Git</span><i>✦</i><span>HTML5</span><i>✦</i><span>CSS3</span><i>✦</i><span>JavaScript</span><i>✦</i><span>TypeScript</span><i>✦</i><span>React</span><i>✦</i><span>Next.js</span><i>✦</i><span>Shopify</span><i>✦</i><span>Tailwind CSS</span><i>✦</i><span>Git</span><i>✦</i></div></div></section>
+
+    <section class="contact section" id="contact"><div class="contact-wrap reveal"><div><p class="eyebrow">04 / Contato</p><h2>Tem uma ideia?<br /><em>Vamos tirar do papel.</em></h2><p>Estou aberto a conversar sobre oportunidades, projetos e experiências digitais.</p></div><div class="contact-actions"><a href="mailto:pedrosilva10057@gmail.com" class="button button-primary">Enviar e-mail <i class="bx bx-envelope"></i></a><a href="https://wa.me/5588993118650" target="_blank" rel="noopener noreferrer" class="button button-ghost">Falar pelo WhatsApp <i class="bx bxl-whatsapp"></i></a></div></div></section>
+  </main>
+
+  <footer class="footer"><span>© 2026 Pedro Silva</span><span>Desenvolvedor Front-end</span><a href="#topo">Voltar ao topo ↑</a></footer>
+
+  <div class="modal-overlay" id="project-modal" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" type="button" aria-label="Fechar detalhes">×</button><div class="modal-main-image"><img id="modal-image" src="" alt="" /><button class="modal-carousel-prev" id="modal-carousel-prev" type="button" aria-label="Imagem anterior"><i class="bx bx-left-arrow-alt"></i></button><button class="modal-carousel-next" id="modal-carousel-next" type="button" aria-label="Próxima imagem"><i class="bx bx-right-arrow-alt"></i></button></div><div class="gallery-grid modal-gallery" id="modal-gallery"></div><p class="project-type">Detalhes do projeto</p><h2 id="modal-title"></h2><p id="modal-description"></p><div class="tech-list" id="modal-tech"></div><div class="modal-actions"><a class="button button-primary" id="modal-live" href="#" target="_blank" rel="noopener noreferrer">Ver projeto <i class="bx bx-link-external"></i></a><a class="button button-ghost" id="modal-repo" href="#" target="_blank" rel="noopener noreferrer">Código <i class="bx bxl-github"></i></a></div></div></div>
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

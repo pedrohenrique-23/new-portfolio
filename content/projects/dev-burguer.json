@@ -1,0 +1,14 @@
+{
+  "id": "dev-burguer",
+  "title": "Dev Burguer",
+  "subtitle": "Cardápio digital e sistema de pedidos para hamburgueria",
+  "category": "Front-End",
+  "cover": "assets/Projects/devburguer-home.jpg",
+  "images": [
+    "assets/Projects/devburguer-home.jpg"
+  ],
+  "description": "Landing page e cardápio interativo para hamburgueria, com controle de carrinho de compras, cálculo de totais e integração para envio do pedido diretamente para o WhatsApp.",
+  "technologies": ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+  "liveUrl": "https://dev-burguer-pedrosilva.vercel.app/",
+  "githubUrl": "https://github.com/pedrohenrique-23/cardapio-online"
+}

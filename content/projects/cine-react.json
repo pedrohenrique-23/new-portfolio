@@ -1,0 +1,14 @@
+{
+  "id": "cine-react",
+  "title": "Cine React",
+  "subtitle": "Plataforma de catálogo e busca de filmes em tempo real",
+  "category": "Front-End",
+  "cover": "assets/Projects/cine-react-home.jpg",
+  "images": [
+    "assets/Projects/cine-react-home.jpg"
+  ],
+  "description": "Aplicação web para busca e exploração de catálogos de filmes, consumindo APIs externas para exibição de detalhes, sinopses e classificações.",
+  "technologies": ["React", "JavaScript", "Tailwind CSS", "REST API"],
+  "liveUrl": "https://projeto-cine-react.vercel.app/",
+  "githubUrl": "https://github.com/pedrohenrique-23/cine-react"
+}

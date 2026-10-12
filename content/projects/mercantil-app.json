@@ -1,0 +1,16 @@
+{
+  "id": "mercantil-app",
+  "title": "Mercatto — Retail Management System",
+  "subtitle": "Sistema de gestão comercial e frente de caixa com arquitetura multi-tenant.",
+  "category": "Fullstack",
+  "cover": "assets/Projects/mercantil-home.jpg",
+  "images": [
+    "assets/Projects/mercantil-home.jpg",
+    "assets/Projects/mercantil-home.jpg",
+    "assets/Projects/mercantil-home.jpg"
+  ],
+  "description": "Sistema web de Gestão e Frente de Caixa (PDV) desenvolvido com foco em mercantil e pequenos comércios locais, em evolução para modelo SaaS Multi-tenant. Conta com Frente de Caixa (PDV) de alta agilidade com atalhos de teclado (F2, F8, ESC), leitor de código de barras e múltiplos pagamentos travados por validação; Gestão e Entrada de Estoque com alerta de mínimo e validação de duplicidade por empresa; Gestão de Caixa com abertura, sangrias, suprimentos e conferência física; controle de Clientes e Fiado com gestão de saldo devedor; painel Financeiro Líquido (Entradas vs. Saídas) e emissão/impressão de comprovantes não fiscais para impressoras térmicas (58mm/80mm).",
+  "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
+  "liveUrl": "https://mercantil-app.vercel.app/",
+  "githubUrl": "https://github.com/pedrohenrique-23/mercantil-app"
+}

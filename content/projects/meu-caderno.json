@@ -1,0 +1,21 @@
+{
+  "id": "meu-caderno",
+  "title": "Mindora — Personal Productivity App",
+  "subtitle": "Um espaço digital para organizar ideias, gerenciar tarefas, acompanhar hábitos e transformar objetivos em progresso diário.",
+  "category": "Fullstack / Web App",
+  "cover": "assets/Projects/caderno-digital-home.png",
+  "images": [
+    "assets/Projects/caderno-digital-home.png",
+    "assets/Projects/caderno-digital-register.png",
+    "assets/Projects/caderno-digital-login.png",
+    "assets/Projects/caderno-digital-new-task.png",
+    "assets/Projects/caderno-digital-habits.png",
+    "assets/Projects/caderno-digital-anotations.png",
+    "assets/Projects/caderno-digital-metas.png",
+    "assets/Projects/caderno-digital-sono.png"
+  ],
+  "description": "O Mindora é uma aplicação web de organização pessoal inspirada no conceito de bullet journal, combinando a flexibilidade de um caderno digital com ferramentas de produtividade em uma única plataforma. O projeto reúne funcionalidades de anotações personalizáveis, gerenciamento de tarefas, acompanhamento de hábitos, registro de sono e definição de metas pessoais, profissionais e financeiras. A proposta é oferecer uma experiência intuitiva e visualmente organizada, ajudando o usuário a centralizar sua rotina e acompanhar seu progresso. Desenvolvido com React, TypeScript e Tailwind CSS, o sistema utiliza Supabase para autenticação e persistência dos dados em PostgreSQL, com políticas de Row Level Security (RLS) para garantir que cada usuário acesse apenas suas próprias informações. A aplicação também conta com uma ferramenta de migração de dados do armazenamento local para o banco em nuvem.",
+  "technologies": ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase", "PostgreSQL"],
+  "liveUrl": "https://brain-notebook.vercel.app/",
+  "githubUrl": "https://github.com/pedrohenrique-23/brain-notebook"
+}
