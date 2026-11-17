@@ -2012,99 +2012,303 @@ h2 em {
 }
 
 
-/* Hero em camadas: título editorial ao fundo e retrato à frente. */
+/* Hero editorial: assinatura no topo, nome à esquerda, retrato central e provas à direita. */
 .hero {
   display: block;
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
-  padding-top: 12rem;
-  padding-bottom: 10rem
+  padding: 12rem 5vw 8rem
 }
 
-.hero-copy {
-  width: min(50%, 62rem);
-  margin-top: clamp(5rem, 10vh, 12rem);
-  z-index: 3
+.hero-topline {
+  position: absolute;
+  top: 10rem;
+  left: 5vw;
+  right: 5vw;
+  z-index: 5;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  font: 500 1.1rem/1.55 'DM Mono', monospace;
+  letter-spacing: .1em;
+  text-transform: uppercase
+}
+
+.hero-topline p {
+  color: var(--text)
+}
+
+.hero-topline p span {
+  color: var(--muted)
+}
+
+.hero-topline .hero-availability {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--muted);
+  letter-spacing: 0
+}
+
+.hero-availability .status-dot {
+  flex: 0 0 7px
 }
 
 .hero-backdrop-word {
-  top: 31%;
-  left: 51%;
+  position: absolute;
+  top: 37%;
+  left: 50%;
   z-index: 1;
   color: var(--accent-text);
-  font-size: clamp(12rem, 25vw, 34rem);
-  letter-spacing: -.105em;
+  font-size: clamp(14rem, 25vw, 38rem);
+  font-weight: 800;
+  letter-spacing: -.11em;
+  line-height: .8;
+  white-space: nowrap;
   opacity: .14;
   transform: translate(-50%, -50%);
-  text-shadow: 0 0 8rem color-mix(in srgb, var(--accent-text) 18%, transparent)
+  pointer-events: none
+}
+
+.hero-copy {
+  position: absolute;
+  left: 8vw;
+  bottom: 13vh;
+  z-index: 4;
+  width: min(34vw, 48rem)
+}
+
+.hero-intro {
+  margin-bottom: .6rem;
+  color: var(--text);
+  font-size: clamp(1.8rem, 2vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -.05em
+}
+
+.hero-copy h1 {
+  font-size: clamp(7rem, 10vw, 14rem);
+  line-height: .83;
+  letter-spacing: -.105em
+}
+
+.hero-copy h1 span {
+  color: var(--accent-text)
+}
+
+.hero-role {
+  margin-top: 1.8rem;
+  color: var(--accent-text);
+  font-size: clamp(1.5rem, 1.7vw, 2.1rem);
+  font-weight: 800
+}
+
+.hero-description {
+  max-width: 44rem;
+  margin: 1.2rem 0 2.2rem;
+  font-size: 1.45rem;
+  line-height: 1.65
+}
+
+.hero-actions {
+  gap: .9rem
+}
+
+.hero-copy .button {
+  padding: 1.15rem 1.5rem;
+  font-size: 1.15rem
+}
+
+.hero-socials {
+  gap: 1.3rem;
+  margin-top: 2.2rem
+}
+
+.hero-socials a {
+  font-size: 1.8rem
 }
 
 .hero-visual {
   position: absolute;
-  top: 15%;
-  right: 8vw;
-  bottom: 7%;
-  z-index: 2;
-  width: min(38vw, 48rem);
+  top: 14%;
+  bottom: 0;
+  left: calc(50% - min(17vw, 23rem));
+  z-index: 3;
+  width: min(34vw, 46rem);
   max-width: none;
   margin: 0
 }
 
 .hero-visual .visual-frame {
+  width: 100%;
   height: 100%;
   aspect-ratio: auto;
-  border-radius: 50% 50% 10px 10px
+  overflow: hidden;
+  border: 0;
+  border-radius: 50% 50% 0 0;
+  background: transparent
 }
 
 .hero-visual .visual-frame img {
-  object-fit: cover
+  object-fit: cover;
+  object-position: center top;
+  mask-image: linear-gradient(to bottom, #000 84%, rgba(0, 0, 0, .82) 92%, transparent 100%)
+}
+
+.hero-proof {
+  position: absolute;
+  right: 5vw;
+  bottom: 14vh;
+  z-index: 4;
+  width: min(22vw, 32rem)
+}
+
+.hero-proof-lead {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.4rem;
+  line-height: 1.25
+}
+
+.hero-proof-lead>span {
+  display: grid;
+  flex: 0 0 4.2rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  place-items: center;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent-text);
+  font-size: 2.5rem
+}
+
+.hero-proof-row {
+  display: grid;
+  grid-template-columns: 6.2rem 1fr;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--line)
+}
+
+.hero-proof-row>strong {
+  color: var(--accent-text);
+  font-size: 4rem;
+  line-height: 1;
+  letter-spacing: -.09em
+}
+
+.hero-proof-row p {
+  display: grid;
+  gap: .3rem;
+  font-size: 1.15rem;
+  line-height: 1.35
+}
+
+.hero-proof-row p span {
+  color: var(--muted)
+}
+
+.hero .scroll-cue {
+  display: none
 }
 
 @media(max-width:900px) {
   .hero {
-    display: grid;
-    grid-template-columns: 1fr;
     min-height: auto;
-    padding-top: 13rem;
-    padding-bottom: 9rem
+    padding: 11rem 6vw 8rem
   }
-  .hero-copy {
-    width: min(100%, 62rem);
-    margin-top: 0
+  .hero-topline {
+    top: 8.5rem;
+    left: 6vw;
+    right: 6vw
   }
   .hero-backdrop-word {
-    top: 68%;
-    left: 50%;
-    font-size: clamp(10rem, 21vw, 19rem)
+    top: 50%;
+    font-size: clamp(10rem, 21vw, 20rem)
+  }
+  .hero-copy {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: min(58%, 48rem);
+    margin-top: 12rem
+  }
+  .hero-copy h1 {
+    font-size: clamp(7rem, 13vw, 11rem)
   }
   .hero-visual {
+    top: 24%;
+    bottom: auto;
+    left: auto;
+    right: 5vw;
+    width: 42%;
+    height: 60vw;
+    max-height: 58rem
+  }
+  .hero-proof {
     position: relative;
-    top: auto;
     right: auto;
     bottom: auto;
-    width: min(80%, 42rem);
-    height: auto;
-    aspect-ratio: 4/5;
-    margin: 4rem auto 0
+    width: min(58%, 48rem);
+    margin: 5rem 0 0 auto
   }
-  .hero-visual .visual-frame {
-    height: 100%
+  .hero-proof-row {
+    grid-template-columns: 6.2rem 1fr
   }
 }
 
 @media(max-width:620px) {
   .hero {
-    padding-top: 12rem;
-    padding-bottom: 8rem
+    padding: 10rem 6vw 6rem
+  }
+  .hero-topline {
+    top: 7.8rem;
+    font-size: .88rem
+  }
+  .hero-topline .hero-availability {
+    gap: .7rem;
+    font-size: .9rem
   }
   .hero-backdrop-word {
-    top: 72%;
-    font-size: 20vw;
+    top: 39%;
+    font-size: 21vw;
     opacity: .12
   }
+  .hero-copy {
+    width: 100%;
+    margin-top: 10rem
+  }
+  .hero-copy h1 {
+    font-size: clamp(7rem, 20vw, 10rem)
+  }
+  .hero-role {
+    margin-top: 1.2rem
+  }
+  .hero-description {
+    max-width: 38rem
+  }
   .hero-visual {
-    width: 88%;
-    margin-top: 3rem
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    width: min(78%, 34rem);
+    height: 105vw;
+    max-height: 44rem;
+    margin: 3rem auto 0
+  }
+  .hero-proof {
+    width: 100%;
+    margin: 3rem 0 0
+  }
+  .hero-proof-row>strong {
+    font-size: 3.5rem
   }
 }
