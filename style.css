@@ -2010,3 +2010,101 @@ h2 em {
     padding-bottom: 1.8rem
   }
 }
+
+
+/* Hero em camadas: título editorial ao fundo e retrato à frente. */
+.hero {
+  display: block;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  padding-top: 12rem;
+  padding-bottom: 10rem
+}
+
+.hero-copy {
+  width: min(50%, 62rem);
+  margin-top: clamp(5rem, 10vh, 12rem);
+  z-index: 3
+}
+
+.hero-backdrop-word {
+  top: 31%;
+  left: 51%;
+  z-index: 1;
+  color: var(--accent-text);
+  font-size: clamp(12rem, 25vw, 34rem);
+  letter-spacing: -.105em;
+  opacity: .14;
+  transform: translate(-50%, -50%);
+  text-shadow: 0 0 8rem color-mix(in srgb, var(--accent-text) 18%, transparent)
+}
+
+.hero-visual {
+  position: absolute;
+  top: 15%;
+  right: 8vw;
+  bottom: 7%;
+  z-index: 2;
+  width: min(38vw, 48rem);
+  max-width: none;
+  margin: 0
+}
+
+.hero-visual .visual-frame {
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 50% 50% 10px 10px
+}
+
+.hero-visual .visual-frame img {
+  object-fit: cover
+}
+
+@media(max-width:900px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 13rem;
+    padding-bottom: 9rem
+  }
+  .hero-copy {
+    width: min(100%, 62rem);
+    margin-top: 0
+  }
+  .hero-backdrop-word {
+    top: 68%;
+    left: 50%;
+    font-size: clamp(10rem, 21vw, 19rem)
+  }
+  .hero-visual {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: min(80%, 42rem);
+    height: auto;
+    aspect-ratio: 4/5;
+    margin: 4rem auto 0
+  }
+  .hero-visual .visual-frame {
+    height: 100%
+  }
+}
+
+@media(max-width:620px) {
+  .hero {
+    padding-top: 12rem;
+    padding-bottom: 8rem
+  }
+  .hero-backdrop-word {
+    top: 72%;
+    font-size: 20vw;
+    opacity: .12
+  }
+  .hero-visual {
+    width: 88%;
+    margin-top: 3rem
+  }
+}
