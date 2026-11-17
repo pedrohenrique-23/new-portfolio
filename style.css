@@ -2132,11 +2132,11 @@ h2 em {
 
 .hero-visual {
   position: absolute;
-  top: 14%;
-  bottom: 0;
-  left: calc(50% - min(17vw, 23rem));
+  top: 5%;
+  bottom: -8%;
+  left: calc(50% - min(18vw, 24.5rem));
   z-index: 3;
-  width: min(34vw, 46rem);
+  width: min(36vw, 49rem);
   max-width: none;
   margin: 0
 }
@@ -2145,16 +2145,22 @@ h2 em {
   width: 100%;
   height: 100%;
   aspect-ratio: auto;
-  overflow: hidden;
+  overflow: visible;
   border: 0;
-  border-radius: 50% 50% 0 0;
+  border-radius: 0;
   background: transparent
 }
 
+.hero-visual .visual-frame::before,
+.hero-visual .visual-frame::after {
+  display: none
+}
+
 .hero-visual .visual-frame img {
-  object-fit: cover;
-  object-position: center top;
-  mask-image: linear-gradient(to bottom, #000 84%, rgba(0, 0, 0, .82) 92%, transparent 100%)
+  object-fit: contain;
+  object-position: center bottom;
+  filter: none;
+  mask-image: none
 }
 
 .hero-proof {
