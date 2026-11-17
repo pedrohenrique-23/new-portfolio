@@ -2132,11 +2132,12 @@ h2 em {
 
 .hero-visual {
   position: absolute;
-  top: 5%;
-  bottom: -8%;
+  top: 7%;
+  bottom: auto;
   left: calc(50% - min(18vw, 24.5rem));
   z-index: 3;
   width: min(36vw, 49rem);
+  height: min(80vh, 45vw);
   max-width: none;
   margin: 0
 }
@@ -2149,6 +2150,12 @@ h2 em {
   border: 0;
   border-radius: 0;
   background: transparent
+}
+
+.hero-visual[data-parallax] .visual-frame {
+  transform: translate3d(0, var(--hero-parallax-y, 0px), 0);
+  transition: transform .12s linear;
+  will-change: transform
 }
 
 .hero-visual .visual-frame::before,
@@ -2254,7 +2261,7 @@ h2 em {
     left: auto;
     right: 5vw;
     width: 42%;
-    height: 60vw;
+    height: min(65vh, 52.5vw);
     max-height: 58rem
   }
   .hero-proof {

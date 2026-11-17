@@ -98,3 +98,21 @@ window.loadProjects().then((loadedProjects) => { projects = loadedProjects; rend
 
 const tilt = document.querySelector('[data-tilt]');
 if (tilt && window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) { tilt.addEventListener('pointermove', (event) => { const rect = tilt.getBoundingClientRect(); const x = (event.clientX - rect.left) / rect.width - 0.5; const y = (event.clientY - rect.top) / rect.height - 0.5; tilt.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${y * -7}deg)`; }); tilt.addEventListener('pointerleave', () => { tilt.style.transform = ''; }); }
+
+const parallaxHero = document.querySelector('[data-parallax]');
+const parallaxFrame = parallaxHero?.querySelector('.visual-frame');
+if (parallaxHero && parallaxFrame && !window.matchMedia('(prefers-reduced-motion:reduce)').matches) {
+  let parallaxFrameRequest = 0;
+  const updateHeroParallax = () => {
+    cancelAnimationFrame(parallaxFrameRequest);
+    parallaxFrameRequest = requestAnimationFrame(() => {
+      const rect = parallaxHero.getBoundingClientRect();
+      const distance = window.innerHeight / 2 - (rect.top + rect.height / 2);
+      const offset = Math.max(-36, Math.min(36, distance * .12));
+      parallaxFrame.style.setProperty('--hero-parallax-y', `${offset.toFixed(1)}px`);
+    });
+  };
+  window.addEventListener('scroll', updateHeroParallax, { passive: true });
+  window.addEventListener('resize', updateHeroParallax);
+  updateHeroParallax();
+}
