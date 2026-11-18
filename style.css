@@ -2133,11 +2133,11 @@ h2 em {
 .hero-visual {
   position: absolute;
   top: 19%;
-  bottom: auto;
+  bottom: 0;
   left: calc(50% - min(18vw, 24.5rem));
   z-index: 3;
   width: min(36vw, 59rem);
-  height: min(80vh, 45vw);
+  height: auto;
   max-width: none;
   margin: 0
 }
