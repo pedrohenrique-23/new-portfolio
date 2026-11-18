@@ -2325,3 +2325,55 @@ h2 em {
     font-size: 3.5rem
   }
 }
+
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  box-shadow: 0 0 1.8rem color-mix(in srgb, var(--accent) 24%, transparent);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(var(--cursor-x, -100px), var(--cursor-y, -100px), 0) translate(-50%, -50%);
+  transition: transform .08s ease-out, width .18s ease, height .18s ease, opacity .18s ease, background-color .18s ease;
+  will-change: transform
+}
+
+.cursor-follower::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: .4rem;
+  height: .4rem;
+  border-radius: 50%;
+  background: var(--accent);
+  content: '';
+  transform: translate(-50%, -50%)
+}
+
+.cursor-follower.is-visible {
+  opacity: .78
+}
+
+.cursor-follower.is-hovering {
+  width: 3.8rem;
+  height: 3.8rem;
+  background: color-mix(in srgb, var(--accent) 7%, transparent)
+}
+
+.cursor-follower.is-pressed {
+  width: 1.2rem;
+  height: 1.2rem
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .cursor-follower {
+    display: none
+  }
+}

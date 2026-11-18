@@ -116,3 +116,31 @@ if (parallaxHero && parallaxFrame && !window.matchMedia('(prefers-reduced-motion
   window.addEventListener('resize', updateHeroParallax);
   updateHeroParallax();
 }
+
+const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (finePointer.matches && !reducedMotion.matches) {
+  const cursorFollower = document.createElement('div');
+  cursorFollower.className = 'cursor-follower';
+  cursorFollower.setAttribute('aria-hidden', 'true');
+  document.body.append(cursorFollower);
+
+  document.addEventListener('pointermove', (event) => {
+    cursorFollower.style.setProperty('--cursor-x', `${event.clientX}px`);
+    cursorFollower.style.setProperty('--cursor-y', `${event.clientY}px`);
+    cursorFollower.classList.add('is-visible');
+  }, { passive: true });
+
+  const interactiveSelector = 'a, button, [role="button"], input, textarea, select, summary, label';
+  document.addEventListener('pointerover', (event) => {
+    if (event.target instanceof Element && event.target.closest(interactiveSelector)) {
+      cursorFollower.classList.add('is-hovering');
+    }
+  });
+  document.addEventListener('pointerout', (event) => {
+    if (event.relatedTarget instanceof Element && event.relatedTarget.closest(interactiveSelector)) return;
+    cursorFollower.classList.remove('is-hovering');
+  });
+  document.addEventListener('pointerdown', () => cursorFollower.classList.add('is-pressed'));
+  document.addEventListener('pointerup', () => cursorFollower.classList.remove('is-pressed'));
+}
